@@ -45,7 +45,7 @@ $(document).ready(function() {
                 translateX: 0
             });
         },
-        150
+        50
     );
 
     registerScrollAnimationClass(
@@ -63,7 +63,23 @@ $(document).ready(function() {
                 translateX: 0
             });
         },
-        150
+        50
+    );
+
+    registerScrollAnimationClass(
+        "scroll-opacity",
+        () => {
+            $(".scroll-opacity").css("opacity", 0);
+        },
+        () => {
+            anime.timeline({})
+            .add({
+                targets: ".scroll-opacity",
+                duration: 6000,
+                opacity: [0, 1],
+            });
+        },
+        50
     );
 
     let title_image = $("#title-image");
@@ -81,4 +97,34 @@ $(document).ready(function() {
         duration: 1000,
         opacity: [0, 1]
     });
+
+    let beginTime = new Date("5/16/2022");
+    let timer = $(".timer");
+    let updateTimer = () => {
+        let endTime = Date.now();
+        let timeDiff = endTime - beginTime;
+        timeDiff /= 1000;
+
+        let minConvert = 60;
+        let hourConvert = minConvert * 60;
+        let dayConvert = hourConvert * 24;
+
+        let days = Math.floor(timeDiff / dayConvert);
+        let hours = Math.floor(timeDiff / hourConvert- days * 24)
+        let mins = Math.floor(timeDiff / minConvert - days * 24 * 60 - hours * 60 );
+        let seconds = Math.round(timeDiff - days * dayConvert - hours * hourConvert - minConvert *mins);
+
+        let addS = (val) => {
+            return val > 1 ? "s" : "";
+        }
+
+        let outputStr = days + " Day" + addS(days);
+        outputStr += " " + hours + " Hour" + addS(hours);
+        outputStr += " " + mins + " Min" + addS(mins);
+        outputStr += " " + seconds + " Second" + addS(seconds);
+        timer.html(outputStr);
+
+        setTimeout(updateTimer, 900);
+    };
+    setTimeout(updateTimer, 900);
 });

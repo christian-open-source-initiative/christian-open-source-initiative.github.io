@@ -4,7 +4,7 @@
       <div class="image-text-container">
         {% set image = resize_image(path=image_path, width=1920, height=720) %}
         <img src="{{image.url}}" id="title-image" class="full-image"/>
-        <div class="centered">
+        <div class="text-img-centered">
           {% if title %}
             <h1 class="title-text">
                 {{title}}

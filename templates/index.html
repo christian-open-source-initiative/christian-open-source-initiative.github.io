@@ -1,46 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
+<section class="main-text-section-white">
+    <h1>Open Providential Provisioning</h1>
 
-<section class="main-section">
     Providing free quality open source software for the church and for everywhere in-between (that means you!)
+    <br />
+
+    More information to come!
+    <br />
+    <br />
+    Days since site creation:
+    <h1>
+    <div class="grid-1-center timer scroll-opacity">
+        Loading...
+    </div>
+    </h1>
 </section>
 
-<section class="main-section">
-    <div class="scroll-appear">
-        <h2 class="line-header"><b>open-source [adj]</b></h2>
-        <br />
-        1. of software: having the source code freely
-        available for possible modification and redistribution.
-    </div>
+<section class="main-section grid-center">
+    <div class="image-text-container">
+        {% set image = resize_image(path="img/code_background.jpg", width=1920, height=720) %}
+        <img src="{{image.url}}" class="full-image blur"/>
+        <div class="scroll-appear text-img">
+            <h2 class="line-header"><b>open-source [adj]</b></h2>
+            <br />
+            1. of software: having the source code freely
+            available for possible modification and redistribution.
 
-    <br />
-    <br />
+            <br />
+            <br />
 
-    <div class="scroll-appear"">
-        <h2 class="line-header"><b>christian [noun]</b></h2>
-        <br />
-        1. one who professes belief in the teachings of Jesus Christ.
+            <h2 class="line-header"><b>christian [noun]</b></h2>
+            <br />
+            1. one who professes belief in the teachings of Jesus Christ.
+        </div>
     </div>
-    <br /> <br />
 </section>
 
 <section class="main-section c-blue-mid grid-center">
-    <div class="quote col-6 scroll-in">
-        <br />
-        <i>"And you shall love the Lord your God with all
-        your heart and with all your soul and with all
-        your mind and with all your strength.'
-        The second is this:
-        <b>'You shall love your neighbor as yourself.'</b>
-        There is no other commandment greater than these."
-        </i>
+    <div class="image-text-container">
+        {% set image = resize_image(path="img/sea.jpg", width=1920, height=350) %}
+        <img src="{{image.url}}" class="full-image" style="filter: blur(4px);"/>
+        <div class="quote col-8 scroll-in text-img">
+            <br />
+            <i>"And you shall love the Lord your God with all
+            your heart and with all your soul and with all
+            your mind and with all your strength.'
+            The second is this:
+            <b>'You shall love your neighbor as yourself.'</b>
+            There is no other commandment greater than these."
+            </i>
 
-        <br />
-        <br />
-        <b>Mark 12:30-31 (ESV; emphasis added)</b>
-        <br />
-        <br />
+            <br />
+            <br />
+            <b>Mark 12:30-31 (ESV; emphasis added)</b>
+            <br />
+            <br />
+        </div>
     </div>
 </section>
 

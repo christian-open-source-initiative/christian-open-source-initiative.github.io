@@ -43,18 +43,30 @@ body {
     margin-bottom: 0rem;
 }
 
-.main-section {
+.main-section, .main-text-section, .main-text-section-white {
     color: white;
-    background-color: #344281;
-    margin-bottom: 1rem;
-    @include padding(2rem 8rem);
+    margin-bottom: 0rem;
 
     font-size: 1.2rem;
 
     @include screen(md) {
+        font-size: 2.5rem;
+    }
+}
+
+.main-text-section, .main-text-section-white {
+    @include padding(2rem 8rem);
+
+    background-color: #447AA1;
+    @include screen(md) {
         @include padding(2rem 4rem);
         font-size: 2.5rem;
     }
+}
+
+.main-text-section-white {
+    color: black;
+    background-color: white;
 }
 
 .c-blue-mid {
@@ -111,23 +123,68 @@ body {
     }
 }
 
-.centered {
+.text-img-centered {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.text-img {
+    position: absolute;
+
+    left: 10%;
+    top: 20%;
+
+    width: 80%;
+
+    @include screen(md) {
+        left: 5%;
+        top: 5%;
+    }
+}
+
 .quote {
     border-left-style: solid;
     border-left-color: #9cffb1;
-    border-left-width: 1rem;
+    border-left-width: 0.4rem;
+    @include padding(null 2rem);
     padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    @include screen(md) {
+        margin-top: 5rem;
+        margin-left: 3rem;
+    }
+}
+
+.blur {
+    filter: blur(10px);
+}
+
+.koulen {
+    font-family: 'Koulen', cursive;
+}
+
+.nav {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.nav-elem {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 0;
+}
+
+.timer {
+    font-size: 4rem;
+
 }
 
 #title-slider {
     margin: 0;
-    margin-top: 4rem;
+    margin-top: 0.5px;
     margin-bottom: 2rem;
 }
 
