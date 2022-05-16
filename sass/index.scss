@@ -1,0 +1,136 @@
+@import "bourbon/bourbon";
+@import "gridlex/gridlex.scss";
+
+$gl-gutter: 0.1rem !default;
+
+// https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
+$screen_size: (
+    sm: 576px,
+    md: 992px,
+    lg: 1200px
+);
+
+$screen_height: (
+    sm: 400px,
+    md: 800px,
+    lg: 1080px,
+);
+
+@mixin screen($size) {
+    @if map-has-key($screen_size, $size) {
+        $value: map-get($screen_size, $size);
+        @media only screen and (max-width: $value) {
+            @content;
+        }
+
+    } @else {
+        @warn "Invalid breakpoint: #{$screen_size}.";
+    }
+}
+
+
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.line-header {
+    border-bottom-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: groove;
+    padding-bottom: 1rem;
+    margin-bottom: 0rem;
+}
+
+.main-section {
+    color: white;
+    background-color: #344281;
+    margin-bottom: 1rem;
+    @include padding(2rem 8rem);
+
+    font-size: 1.2rem;
+
+    @include screen(md) {
+        @include padding(2rem 4rem);
+        font-size: 2.5rem;
+    }
+}
+
+.c-blue-mid {
+    background-color: #447aa1;
+}
+
+.full-image {
+    object-fit: cover;
+    width: 100%;
+
+    @include screen(md) {
+        height: map-get($screen_height, md);
+    }
+    @include screen(sm) {
+        height: map-get($screen_height, sm);
+    }
+}
+
+.image-text-container {
+    display: inline-block;
+    position: relative;
+}
+
+.title-text, .subtitle-text {
+    color: black;
+    text-align: center;
+    // font-family: 'Koulen', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-text {
+    font-size: 5rem;
+
+    @include screen(md) {
+        text-align: left;
+        font-size: 6rem;
+    }
+
+    @include screen(sm) {
+        font-size: 3rem;
+    }
+}
+
+.subtitle-text {
+    font-size: 3.5rem;
+
+    @include screen(md) {
+        text-align: left;
+        font-size: 2.5rem;
+    }
+
+    @include screen(sm) {
+        font-size: 2.5rem;
+    }
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.quote {
+    border-left-style: solid;
+    border-left-color: #9cffb1;
+    border-left-width: 1rem;
+    padding-left: 1rem;
+}
+
+#title-slider {
+    margin: 0;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+#title-slider {
+    text-align: center;
+}

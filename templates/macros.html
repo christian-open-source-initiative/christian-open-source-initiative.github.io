@@ -1,0 +1,22 @@
+{% macro title_img(image_path, title="", subtitle="") %}
+<div class="grid-1-center-noGutter" id="title-slider">
+  <div class="col-12-center">
+      <div class="image-text-container">
+        {% set image = resize_image(path=image_path, width=1920, height=720) %}
+        <img src="{{image.url}}" id="title-image" class="full-image"/>
+        <div class="centered">
+          {% if title %}
+            <h1 class="title-text">
+                {{title}}
+            </h1>
+          {% endif %}
+          {% if subtitle %}
+            <h2 class="subtitle-text">
+                <i>{{subtitle}}</i>
+            </h2>
+          {% endif %}
+        </div>
+      </div>
+  </div>
+</div>
+{% endmacro title_img %}
