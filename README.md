@@ -1,7 +1,7 @@
 # COSI Website Source Code
 
 This is the source code for the COSI website!
-Private until otherwise.
+In true spirit of the organization, the code is also open source.
 
 Built on top of https://www.getzola.org/documentation/getting-started/overview/
 
