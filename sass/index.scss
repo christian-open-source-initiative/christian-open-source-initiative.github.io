@@ -28,6 +28,9 @@ $screen_height: (
     }
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -169,6 +172,7 @@ body {
 .nav {
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    @include padding(null 1rem);
 }
 
 .nav-elem {
