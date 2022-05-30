@@ -6,11 +6,11 @@
 <head>
   <meta charset="utf-8">
   <title>COSI</title>
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="/index.css" />
 
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/anime.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/anime.min.js"></script>
+  <script src="/js/index.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,12 +30,10 @@
     More Info to Come
   </div>
 </div>
-
-{{ macros::title_img(title="Christian Open Source Initiative", image_path="img/title_slider.jpg") }}
-
 <div class="grid-1-center">
   <div class="col-12-center" id="content">
-    {% block content %} {% endblock %}
+    {% block content %}
+    {% endblock %}
   </div>
 </div>
 

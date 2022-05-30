@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="main-text-section-white">
+    Below you will find projects made by COSI:
+    <br /> <br />
+    {% for post in section.pages %}
+        {% set image = resize_image(path=post.extra.image_path, width=240, height=180) %}
+        <a href="{{ post.path }}" >
+            <img src="{{ image.url }}" />
+        </a>
+        <br />
+    {% endfor %}
+</section>
+{% endblock content %}
