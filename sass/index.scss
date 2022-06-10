@@ -2,6 +2,7 @@
 @import "gridlex/gridlex.scss";
 
 $gl-gutter: 0.1rem !default;
+$def_font_color: black;
 
 // https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
 $screen_size: (
@@ -166,6 +167,7 @@ body {
 }
 
 .koulen {
+    // font-family: 'Georgia', cursive;
     font-family: 'Koulen', cursive;
 }
 
@@ -179,6 +181,20 @@ body {
     text-align: center;
     font-size: 3rem;
     padding-bottom: 0;
+}
+
+.link-no-style {
+    text-decoration: none;
+    color: $def_font_color;
+}
+
+.link-no-style:visited {
+    text-decoration: none;
+    color: $def_font_color;
+}
+
+.link-no-style:default {
+    color: $def_font_color;
 }
 
 .timer {
