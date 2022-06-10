@@ -174,13 +174,26 @@ body {
 .nav {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    @include padding(null 1rem);
+    @include padding(null 0.6rem);
 }
 
 .nav-elem {
-    text-align: center;
-    font-size: 3rem;
+    text-align: right;
+    font-size: 2rem;
     padding-bottom: 0;
+    padding-top: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    @include screen(md) {
+        font-size: 3rem;
+        margin-right: 1rem;
+    }
+}
+
+.nav-title {
+    @extend .nav-elem;
+    padding-top: 0;
+    font-family: 'Koulen', cursive;
+    text-align: center;
 }
 
 .link-no-style {
