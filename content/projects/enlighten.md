@@ -2,13 +2,14 @@
 
 title = "Enlighten"
 description = "An AI Image Generator"
-template = "projects.html"
+template = "markdown.html"
 
 [extra]
 image_path="img/sea.jpg"
 +++
 
-## Enlighten v2: An AI Based Image Renderer
+## Enlighten: An AI Based Quote Image Renderer
+### Generating Images One at a Time
 
 A Python based script for massive rendering of quotes
 on top of text. AI used for placing quote blocks on images

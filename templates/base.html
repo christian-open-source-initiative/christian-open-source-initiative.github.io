@@ -19,10 +19,11 @@
 </head>
 
 <body>
-
 <div class="grid-1 nav">
-  <div class="nav-title col-1">
+  <div class="nav-title col-2">
+    {% set logo = resize_image(path="img/logo.png", width=32, height=32) %}
     <a class="link-no-style" href="/">
+      <img src="{{logo.url}}" id="nav-logo" />
       COSI
     </a>
   </div>
@@ -30,7 +31,7 @@
   <div class="nav-elem col-5">
   </div>
   <div class="nav-elem col-2">
-    <a class="link-no-style" href="">
+    <a class="link-no-style" href="/about">
       About
     </a>
   </div>
@@ -47,6 +48,16 @@
   </div>
 </div>
 
+<footer>
+  <div class="grid-1-center">
+    <div class="col-6">
+      Website by COSI | Creative Commons License |
+      <a href="mailto:christianopensourceinitiative@gmail.com">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>

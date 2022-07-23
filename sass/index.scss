@@ -1,33 +1,7 @@
 @import "bourbon/bourbon";
 @import "gridlex/gridlex.scss";
 
-$gl-gutter: 0.1rem !default;
-$def_font_color: black;
-
-// https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
-$screen_size: (
-    sm: 576px,
-    md: 992px,
-    lg: 1200px
-);
-
-$screen_height: (
-    sm: 400px,
-    md: 800px,
-    lg: 1080px,
-);
-
-@mixin screen($size) {
-    @if map-has-key($screen_size, $size) {
-        $value: map-get($screen_size, $size);
-        @media only screen and (max-width: $value) {
-            @content;
-        }
-
-    } @else {
-        @warn "Invalid breakpoint: #{$screen_size}.";
-    }
-}
+@import "vars.scss";
 
 html, body {
     overflow-x: hidden;
@@ -37,6 +11,33 @@ body {
     margin: 0;
     background-color: #fff;
     font-family:Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background-color: #60676c;
+    text-align: center;
+    color: #fff;
+    @include padding(2rem 4rem);
+}
+
+footer a {
+    @extend .link-no-style;
+    color: #fff !important;
+}
+
+footer a:visited {
+    @extend .link-no-style:visited;
+    color: #fff !important;
+}
+
+footer a:default {
+    @extend .link-no-style:default;
+    color: #fff !important;
+    font-style: none;
+}
+
+footer a:hover {
+    font-style: bold;
 }
 
 .line-header {
@@ -175,6 +176,10 @@ body {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     @include padding(null 0.6rem);
+
+    @include screen(md) {
+        border-bottom-width: 2px;
+    }
 }
 
 .nav-elem {
@@ -183,9 +188,10 @@ body {
     padding-bottom: 0;
     padding-top: 0.5rem;
     font-family: 'Roboto', sans-serif;
+
     @include screen(md) {
-        font-size: 3rem;
-        margin-right: 1rem;
+        font-size: 2.5rem;
+        margin-right: 0.5rem;
     }
 }
 
@@ -212,7 +218,14 @@ body {
 
 .timer {
     font-size: 4rem;
+}
 
+.project-display-name {
+    font-family: 'Roboto', sans-serif;
+
+    @include screen(md) {
+        font-size: 1.7rem;
+    }
 }
 
 #title-slider {
@@ -223,4 +236,12 @@ body {
 
 #title-slider {
     text-align: center;
+}
+
+#nav-logo {
+    transform: translateY(5px);
+
+    @include screen(md) {
+        transform: translateY(2px);
+    }
 }
