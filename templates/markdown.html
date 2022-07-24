@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="main-text-section-white">
+    {{ page.content | safe }}
+
+    {% if page.extra.project_link %}
+        See the project here:
+        {{ macros::github_button(link=page.extra.project_link) }}
+    {% endif %}
+</section>
+{% endblock content %}

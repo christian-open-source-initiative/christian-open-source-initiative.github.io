@@ -6,11 +6,12 @@
 <head>
   <meta charset="utf-8">
   <title>COSI</title>
-  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" type="text/css" href="/index.css" />
 
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/anime.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/anime.min.js"></script>
+  <script src="/js/projects.js"></script>
+  <script src="/js/index.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,27 +19,51 @@
 </head>
 
 <body>
-
 <div class="grid-1 nav">
-  <div class="nav-elem col-1 koulen">
-    COSI
+  <div class="nav-title col-2">
+    {% set logo = resize_image(path="img/logo.png", width=32, height=32) %}
+    <a class="link-no-style" href="/">
+      <img src="{{logo.url}}" id="nav-logo" />
+      COSI
+    </a>
   </div>
 
-  <div class="nav-elem col-8 koulen">
+  <div class="nav-elem col-3">
   </div>
-  <div class="nav-elem col-3 koulen">
-    More Info to Come
+  <div class="nav-elem col-2">
+    <a class="link-no-style" href="/about">
+      About
+    </a>
+  </div>
+  <div class="nav-elem col-2">
+    <a class="link-no-style" href="/projects">
+      Projects
+    </a>
+  </div>
+
+  <div class="nav-elem col-2">
+    <a class="link-no-style" href="https://github.com/christian-open-source-initiative">
+      Github
+    </a>
   </div>
 </div>
-
-{{ macros::title_img(title="Christian Open Source Initiative", image_path="img/title_slider.jpg") }}
-
 <div class="grid-1-center">
   <div class="col-12-center" id="content">
-    {% block content %} {% endblock %}
+    {% block content %}
+    {% endblock %}
   </div>
 </div>
 
+<footer>
+  <div class="grid-1-center">
+    <div class="col-6">
+      Website by COSI | Creative Commons License |
+      <a href="mailto:christianopensourceinitiative@gmail.com">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</footer>
 </body>
 
 </html>
