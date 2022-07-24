@@ -24,5 +24,5 @@ gifts, talents, and abilities seeking to bless others.
 <div class="profile">
     <h1 class="name">Hirudan</h1>
     <h2 class="roles">Founder | Programmer</h2>
-    Much program. Wow.
+    Much program. Wow. More info to come!
 </div>
