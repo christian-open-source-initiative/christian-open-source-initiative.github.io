@@ -20,3 +20,15 @@
   </div>
 </div>
 {% endmacro title_img %}
+
+{% macro github_button(link, size="large") %}
+<a class="basic-button-link" href="{{link}}">
+    <div class="github-{{size}}">
+        {% set github_button = resize_image(path="content/img/icons/291716_github_icon.png", height=30, width=30) %}
+        <img src="{{ github_button.url }}" />
+        <p>
+            Github
+        </p>
+    </div>
+</a>
+{% endmacro github_button %}

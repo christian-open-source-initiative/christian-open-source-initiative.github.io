@@ -15,6 +15,7 @@ gifts, talents, and abilities seeking to bless others.
 <div class="profile">
     <h1 class="name">ProgrammingIncluded</h1>
     <h2 class="roles">Founder | Programmer</h2>
+{{ github_button(link="https://github.com/ProgrammingIncluded", size="small") }}
     Computer programmer by day and artist by night.
     ProgrammingIncluded continues to find ways to enrich
     other people's lives and enable them through technology.

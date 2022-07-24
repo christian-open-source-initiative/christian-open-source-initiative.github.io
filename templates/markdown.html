@@ -5,15 +5,8 @@
     {{ page.content | safe }}
 
     {% if page.extra.project_link %}
-        <a class="basic-button-link" href="{{page.extra.project_link}}">
-            <div class="github-large">
-                {% set github_button = resize_image(path='content/img/icons/291716_github_icon.png', height=30, width=30) %}
-                <img src="{{ github_button.url }}" />
-                <p>
-                    Github
-                </p>
-            </div>
-        </a>
+        See the project here:
+        {{ macros::github_button(link=page.extra.project_link) }}
     {% endif %}
 </section>
 {% endblock content %}
