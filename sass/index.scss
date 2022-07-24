@@ -26,12 +26,12 @@ footer a {
 }
 
 footer a:visited {
-    @extend .link-no-style:visited;
+    @extend .link-no-style, :visited;
     color: #fff !important;
 }
 
 footer a:default {
-    @extend .link-no-style:default;
+    @extend .link-no-style, :default;
     color: #fff !important;
     font-style: none;
 }

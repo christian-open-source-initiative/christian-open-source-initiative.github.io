@@ -7,6 +7,10 @@ Built on top of https://www.getzola.org/documentation/getting-started/overview/
 
 Which is well documented and recommend checking out.
 
+## Dependencies
+
+* Zola `0.15.3`
+
 ## Local Debug and Refreshing
 
 > zola serve
