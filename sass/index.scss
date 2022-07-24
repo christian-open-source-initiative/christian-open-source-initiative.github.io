@@ -245,3 +245,35 @@ footer a:hover {
         transform: translateY(2px);
     }
 }
+
+// Github icons
+.basic-button-link {
+    @extend .link-no-style;
+}
+
+.github-large {
+    @extend .link-no-style;
+    color: white;
+    background-color: #3d3d3d;
+    margin: 1rem;
+    padding: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    width: max-content;
+    border-radius: 10px;
+}
+
+.github-large p {
+    position: relative;
+    transform: translateY(-70%);
+    padding: 0;
+    padding-left: 3rem;
+    margin: 0;
+}
+
+.github-large img {
+    position: relative;
+    transform: translateY(50%);
+    margin-right: 1rem;
+}

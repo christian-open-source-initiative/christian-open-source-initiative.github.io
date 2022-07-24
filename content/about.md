@@ -3,7 +3,6 @@
 title = "About Us"
 description = "About the team."
 template = "markdown.html"
-
 +++
 
 <link rel="stylesheet" type="text/css" href="/profile.css" />
