@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://christian-open-source-initiative.github.io/sitemap.xml
