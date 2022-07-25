@@ -6,7 +6,7 @@ template = "markdown.html"
 
 [extra]
 image_path = "img/projects/enlighting/collage.jpg"
-project_link = "https://github.com/ProgrammingIncluded/Enlighting"
+project_link = "https://github.com/christian-open-source-initiative/Enlighting"
 +++
 
 ## Enlighting: An AI Based Quote Image Renderer
@@ -21,4 +21,3 @@ without blocking subjects.
 
 Customizable fonts, and render engine open sourced for your
 own project needs.
-
